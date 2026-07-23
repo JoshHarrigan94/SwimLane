@@ -1,0 +1,153 @@
+{
+  "snapshot": {
+    "id": "fixture-cli",
+    "sourceId": "fixture",
+    "requestedUrl": "fixture",
+    "finalUrl": "fixture",
+    "httpStatus": 200,
+    "fetchedAt": "2026-07-23T14:01:35.730Z",
+    "headers": {},
+    "html": "<!doctype html><main><h2>WNPS Lane Swimming</h2><p>Updated 23/07/2026 13:30</p><h3>Monday 27th July 2026</h3><p>06:00 – 08:00 50m Pool Lane Swimming – 4 Lanes</p><p>08:00 – 09:00 Training Pool Lane Swimming</p><h3>Tuesday 28th July 2026</h3><p>06:00 – 09:30 25m Split Lane Swimming x 2 Lanes</p><h3>Wednesday 29th July 2026</h3><p>06:00 – 09:30 23m Split Lane Swimming</p><h3>Thursday 30th July 2026</h3><p>06:00 – 09:15 Training Pool Lane Swimming</p><h3>Friday 31st July 2026</h3><p>06:00 – 09:30 50m Pool Lane Swimming</p><h3>Saturday 1st August 2026</h3><p>09:00 – 10:30 50m Pool Lane Swimming</p><h3>Sunday 2nd August 2026</h3><p>09:00 – 11:00 25m Split Lane Swimming</p></main>\n",
+    "contentHash": "fixture"
+  },
+  "coverage": {
+    "monday": "2026-07-27",
+    "sunday": "2026-08-02",
+    "displayedDateText": "Monday 27th July 202606:00 – 08:00 50m Pool Lane Swimming – 4 Lanes08:00 – 09:00 Training Pool Lane SwimmingTuesday 28th July 202606:00 – 09:30 25m Split Lane Swimming x 2 LanesWednesday 29th July 202606:00 – 09:30 23m Split Lane SwimmingThursday 30th July 202606:00 – 09:15 Training Pool Lane SwimmingFriday 31st July 202606:00 – 09:30 50m Pool Lane SwimmingSaturday 1st August 202609:00 – 10:30 50m Pool Lane SwimmingSunday 2nd August 202609:00 – 11:00 25m Split Lane Swimming",
+    "confidence": "high",
+    "derivation": [
+      "Derived from explicit weekday/date headings."
+    ]
+  },
+  "rows": [
+    {
+      "id": "row-fixture-cli-0",
+      "sourceSnapshotId": "fixture-cli",
+      "dayText": "monday",
+      "displayedDateText": "2026-07-27",
+      "rawTimeText": "06:00 - 08:00 ",
+      "rawPoolText": "50m Pool",
+      "rawSessionText": "06:00 – 08:00 50m Pool Lane Swimming – 4 Lanes",
+      "rawRestrictionText": null,
+      "isStruckThrough": false,
+      "isCancelled": false,
+      "htmlContext": "<p>06:00 – 08:00 50m Pool Lane Swimming – 4 Lanes</p>",
+      "sourceOrder": 1,
+      "extractionWarnings": []
+    },
+    {
+      "id": "row-fixture-cli-1",
+      "sourceSnapshotId": "fixture-cli",
+      "dayText": "monday",
+      "displayedDateText": "2026-07-27",
+      "rawTimeText": "08:00 - 09:00 ",
+      "rawPoolText": "Training Pool",
+      "rawSessionText": "08:00 – 09:00 Training Pool Lane Swimming",
+      "rawRestrictionText": null,
+      "isStruckThrough": false,
+      "isCancelled": false,
+      "htmlContext": "<p>08:00 – 09:00 Training Pool Lane Swimming</p>",
+      "sourceOrder": 2,
+      "extractionWarnings": []
+    },
+    {
+      "id": "row-fixture-cli-2",
+      "sourceSnapshotId": "fixture-cli",
+      "dayText": "tuesday",
+      "displayedDateText": "2026-07-28",
+      "rawTimeText": "06:00 - 09:30 ",
+      "rawPoolText": "25m Split",
+      "rawSessionText": "06:00 – 09:30 25m Split Lane Swimming x 2 Lanes",
+      "rawRestrictionText": null,
+      "isStruckThrough": false,
+      "isCancelled": false,
+      "htmlContext": "<p>06:00 – 09:30 25m Split Lane Swimming x 2 Lanes</p>",
+      "sourceOrder": 3,
+      "extractionWarnings": []
+    },
+    {
+      "id": "row-fixture-cli-3",
+      "sourceSnapshotId": "fixture-cli",
+      "dayText": "wednesday",
+      "displayedDateText": "2026-07-29",
+      "rawTimeText": "06:00 - 09:30 ",
+      "rawPoolText": "23m Split",
+      "rawSessionText": "06:00 – 09:30 23m Split Lane Swimming",
+      "rawRestrictionText": null,
+      "isStruckThrough": false,
+      "isCancelled": false,
+      "htmlContext": "<p>06:00 – 09:30 23m Split Lane Swimming</p>",
+      "sourceOrder": 4,
+      "extractionWarnings": []
+    },
+    {
+      "id": "row-fixture-cli-4",
+      "sourceSnapshotId": "fixture-cli",
+      "dayText": "thursday",
+      "displayedDateText": "2026-07-30",
+      "rawTimeText": "06:00 - 09:15 ",
+      "rawPoolText": "Training Pool",
+      "rawSessionText": "06:00 – 09:15 Training Pool Lane Swimming",
+      "rawRestrictionText": null,
+      "isStruckThrough": false,
+      "isCancelled": false,
+      "htmlContext": "<p>06:00 – 09:15 Training Pool Lane Swimming</p>",
+      "sourceOrder": 5,
+      "extractionWarnings": []
+    },
+    {
+      "id": "row-fixture-cli-5",
+      "sourceSnapshotId": "fixture-cli",
+      "dayText": "friday",
+      "displayedDateText": "2026-07-31",
+      "rawTimeText": "06:00 - 09:30 ",
+      "rawPoolText": "50m Pool",
+      "rawSessionText": "06:00 – 09:30 50m Pool Lane Swimming",
+      "rawRestrictionText": null,
+      "isStruckThrough": false,
+      "isCancelled": false,
+      "htmlContext": "<p>06:00 – 09:30 50m Pool Lane Swimming</p>",
+      "sourceOrder": 6,
+      "extractionWarnings": []
+    },
+    {
+      "id": "row-fixture-cli-6",
+      "sourceSnapshotId": "fixture-cli",
+      "dayText": "saturday",
+      "displayedDateText": "2026-08-01",
+      "rawTimeText": "09:00 - 10:30 ",
+      "rawPoolText": "50m Pool",
+      "rawSessionText": "09:00 – 10:30 50m Pool Lane Swimming",
+      "rawRestrictionText": null,
+      "isStruckThrough": false,
+      "isCancelled": false,
+      "htmlContext": "<p>09:00 – 10:30 50m Pool Lane Swimming</p>",
+      "sourceOrder": 7,
+      "extractionWarnings": []
+    },
+    {
+      "id": "row-fixture-cli-7",
+      "sourceSnapshotId": "fixture-cli",
+      "dayText": "sunday",
+      "displayedDateText": "2026-08-02",
+      "rawTimeText": "09:00 - 11:00 ",
+      "rawPoolText": "25m Split",
+      "rawSessionText": "09:00 – 11:00 25m Split Lane Swimming",
+      "rawRestrictionText": null,
+      "isStruckThrough": false,
+      "isCancelled": false,
+      "htmlContext": "<p>09:00 – 11:00 25m Split Lane Swimming</p>",
+      "sourceOrder": 8,
+      "extractionWarnings": []
+    }
+  ],
+  "notices": [],
+  "unparsed": [],
+  "issues": [],
+  "structure": {
+    "headings": 8,
+    "daySections": 7,
+    "extractedRows": 8,
+    "interpretedTextRatio": 1
+  }
+}

@@ -1,0 +1,353 @@
+{
+  "sessions": [
+    {
+      "id": "session-row-fixture-cli-0",
+      "sourceSnapshotId": "fixture-cli",
+      "sourceRowId": "row-fixture-cli-0",
+      "date": "2026-07-27",
+      "start": "06:00",
+      "end": "08:00",
+      "pool": "main",
+      "configuration": "Full 50m main pool",
+      "totalLanes": null,
+      "publicLanes": 4,
+      "laneAllocations": [
+        {
+          "type": "public",
+          "count": 4
+        }
+      ],
+      "restrictions": [],
+      "originalSourceText": "06:00 – 08:00 50m Pool Lane Swimming – 4 Lanes",
+      "sourceUpdateTimestamp": "2026-07-23T14:01:35.730Z",
+      "parsingConfidence": 1,
+      "verified": true,
+      "expectedPressure": 3,
+      "bestUse": [
+        "lane swimming"
+      ],
+      "source": {
+        "updatedAt": "2026-07-23T14:01:35.730Z",
+        "confidence": "High",
+        "status": "verified"
+      },
+      "reservedLanes": null,
+      "sessionLabels": [
+        "lane swimming"
+      ],
+      "reasonCodes": [],
+      "warnings": [],
+      "publishable": true
+    },
+    {
+      "id": "session-row-fixture-cli-1",
+      "sourceSnapshotId": "fixture-cli",
+      "sourceRowId": "row-fixture-cli-1",
+      "date": "2026-07-27",
+      "start": "08:00",
+      "end": "09:00",
+      "pool": "training",
+      "configuration": "25m training pool",
+      "totalLanes": null,
+      "publicLanes": null,
+      "laneAllocations": [],
+      "restrictions": [],
+      "originalSourceText": "08:00 – 09:00 Training Pool Lane Swimming",
+      "sourceUpdateTimestamp": "2026-07-23T14:01:35.730Z",
+      "parsingConfidence": 0.65,
+      "verified": false,
+      "expectedPressure": 3,
+      "bestUse": [
+        "lane swimming"
+      ],
+      "source": {
+        "updatedAt": "2026-07-23T14:01:35.730Z",
+        "confidence": "Medium",
+        "status": "estimated",
+        "note": "The venue does not state a public lane quantity."
+      },
+      "reservedLanes": null,
+      "sessionLabels": [
+        "lane swimming"
+      ],
+      "reasonCodes": [
+        "PUBLIC_LANES_UNKNOWN"
+      ],
+      "warnings": [
+        {
+          "id": "PUBLIC_LANES_UNKNOWN-row-fixture-cli-1",
+          "code": "PUBLIC_LANES_UNKNOWN",
+          "message": "The venue does not state a public lane quantity.",
+          "severity": "warning",
+          "sourceRowId": "row-fixture-cli-1"
+        }
+      ],
+      "publishable": true
+    },
+    {
+      "id": "session-row-fixture-cli-2",
+      "sourceSnapshotId": "fixture-cli",
+      "sourceRowId": "row-fixture-cli-2",
+      "date": "2026-07-28",
+      "start": "06:00",
+      "end": "09:30",
+      "pool": "main",
+      "configuration": "Split 25m main pool",
+      "totalLanes": null,
+      "publicLanes": 2,
+      "laneAllocations": [
+        {
+          "type": "public",
+          "count": 2
+        }
+      ],
+      "restrictions": [],
+      "originalSourceText": "06:00 – 09:30 25m Split Lane Swimming x 2 Lanes",
+      "sourceUpdateTimestamp": "2026-07-23T14:01:35.730Z",
+      "parsingConfidence": 1,
+      "verified": true,
+      "expectedPressure": 3,
+      "bestUse": [
+        "lane swimming"
+      ],
+      "source": {
+        "updatedAt": "2026-07-23T14:01:35.730Z",
+        "confidence": "High",
+        "status": "verified"
+      },
+      "reservedLanes": null,
+      "sessionLabels": [
+        "lane swimming"
+      ],
+      "reasonCodes": [],
+      "warnings": [],
+      "publishable": true
+    },
+    {
+      "id": "session-row-fixture-cli-3",
+      "sourceSnapshotId": "fixture-cli",
+      "sourceRowId": "row-fixture-cli-3",
+      "date": "2026-07-29",
+      "start": "06:00",
+      "end": "09:30",
+      "pool": "main",
+      "configuration": "Split 23m main pool",
+      "totalLanes": null,
+      "publicLanes": null,
+      "laneAllocations": [],
+      "restrictions": [],
+      "originalSourceText": "06:00 – 09:30 23m Split Lane Swimming",
+      "sourceUpdateTimestamp": "2026-07-23T14:01:35.730Z",
+      "parsingConfidence": 0.65,
+      "verified": false,
+      "expectedPressure": 3,
+      "bestUse": [
+        "lane swimming"
+      ],
+      "source": {
+        "updatedAt": "2026-07-23T14:01:35.730Z",
+        "confidence": "Medium",
+        "status": "estimated",
+        "note": "The venue does not state a public lane quantity."
+      },
+      "reservedLanes": null,
+      "sessionLabels": [
+        "lane swimming"
+      ],
+      "reasonCodes": [
+        "PUBLIC_LANES_UNKNOWN"
+      ],
+      "warnings": [
+        {
+          "id": "PUBLIC_LANES_UNKNOWN-row-fixture-cli-3",
+          "code": "PUBLIC_LANES_UNKNOWN",
+          "message": "The venue does not state a public lane quantity.",
+          "severity": "warning",
+          "sourceRowId": "row-fixture-cli-3"
+        }
+      ],
+      "publishable": true
+    },
+    {
+      "id": "session-row-fixture-cli-4",
+      "sourceSnapshotId": "fixture-cli",
+      "sourceRowId": "row-fixture-cli-4",
+      "date": "2026-07-30",
+      "start": "06:00",
+      "end": "09:15",
+      "pool": "training",
+      "configuration": "25m training pool",
+      "totalLanes": null,
+      "publicLanes": null,
+      "laneAllocations": [],
+      "restrictions": [],
+      "originalSourceText": "06:00 – 09:15 Training Pool Lane Swimming",
+      "sourceUpdateTimestamp": "2026-07-23T14:01:35.730Z",
+      "parsingConfidence": 0.65,
+      "verified": false,
+      "expectedPressure": 3,
+      "bestUse": [
+        "lane swimming"
+      ],
+      "source": {
+        "updatedAt": "2026-07-23T14:01:35.730Z",
+        "confidence": "Medium",
+        "status": "estimated",
+        "note": "The venue does not state a public lane quantity."
+      },
+      "reservedLanes": null,
+      "sessionLabels": [
+        "lane swimming"
+      ],
+      "reasonCodes": [
+        "PUBLIC_LANES_UNKNOWN"
+      ],
+      "warnings": [
+        {
+          "id": "PUBLIC_LANES_UNKNOWN-row-fixture-cli-4",
+          "code": "PUBLIC_LANES_UNKNOWN",
+          "message": "The venue does not state a public lane quantity.",
+          "severity": "warning",
+          "sourceRowId": "row-fixture-cli-4"
+        }
+      ],
+      "publishable": true
+    },
+    {
+      "id": "session-row-fixture-cli-5",
+      "sourceSnapshotId": "fixture-cli",
+      "sourceRowId": "row-fixture-cli-5",
+      "date": "2026-07-31",
+      "start": "06:00",
+      "end": "09:30",
+      "pool": "main",
+      "configuration": "Full 50m main pool",
+      "totalLanes": null,
+      "publicLanes": null,
+      "laneAllocations": [],
+      "restrictions": [],
+      "originalSourceText": "06:00 – 09:30 50m Pool Lane Swimming",
+      "sourceUpdateTimestamp": "2026-07-23T14:01:35.730Z",
+      "parsingConfidence": 0.65,
+      "verified": false,
+      "expectedPressure": 3,
+      "bestUse": [
+        "lane swimming"
+      ],
+      "source": {
+        "updatedAt": "2026-07-23T14:01:35.730Z",
+        "confidence": "Medium",
+        "status": "estimated",
+        "note": "The venue does not state a public lane quantity."
+      },
+      "reservedLanes": null,
+      "sessionLabels": [
+        "lane swimming"
+      ],
+      "reasonCodes": [
+        "PUBLIC_LANES_UNKNOWN"
+      ],
+      "warnings": [
+        {
+          "id": "PUBLIC_LANES_UNKNOWN-row-fixture-cli-5",
+          "code": "PUBLIC_LANES_UNKNOWN",
+          "message": "The venue does not state a public lane quantity.",
+          "severity": "warning",
+          "sourceRowId": "row-fixture-cli-5"
+        }
+      ],
+      "publishable": true
+    },
+    {
+      "id": "session-row-fixture-cli-6",
+      "sourceSnapshotId": "fixture-cli",
+      "sourceRowId": "row-fixture-cli-6",
+      "date": "2026-08-01",
+      "start": "09:00",
+      "end": "10:30",
+      "pool": "main",
+      "configuration": "Full 50m main pool",
+      "totalLanes": null,
+      "publicLanes": null,
+      "laneAllocations": [],
+      "restrictions": [],
+      "originalSourceText": "09:00 – 10:30 50m Pool Lane Swimming",
+      "sourceUpdateTimestamp": "2026-07-23T14:01:35.730Z",
+      "parsingConfidence": 0.65,
+      "verified": false,
+      "expectedPressure": 3,
+      "bestUse": [
+        "lane swimming"
+      ],
+      "source": {
+        "updatedAt": "2026-07-23T14:01:35.730Z",
+        "confidence": "Medium",
+        "status": "estimated",
+        "note": "The venue does not state a public lane quantity."
+      },
+      "reservedLanes": null,
+      "sessionLabels": [
+        "lane swimming"
+      ],
+      "reasonCodes": [
+        "PUBLIC_LANES_UNKNOWN"
+      ],
+      "warnings": [
+        {
+          "id": "PUBLIC_LANES_UNKNOWN-row-fixture-cli-6",
+          "code": "PUBLIC_LANES_UNKNOWN",
+          "message": "The venue does not state a public lane quantity.",
+          "severity": "warning",
+          "sourceRowId": "row-fixture-cli-6"
+        }
+      ],
+      "publishable": true
+    },
+    {
+      "id": "session-row-fixture-cli-7",
+      "sourceSnapshotId": "fixture-cli",
+      "sourceRowId": "row-fixture-cli-7",
+      "date": "2026-08-02",
+      "start": "09:00",
+      "end": "11:00",
+      "pool": "main",
+      "configuration": "Split 25m main pool",
+      "totalLanes": null,
+      "publicLanes": null,
+      "laneAllocations": [],
+      "restrictions": [],
+      "originalSourceText": "09:00 – 11:00 25m Split Lane Swimming",
+      "sourceUpdateTimestamp": "2026-07-23T14:01:35.730Z",
+      "parsingConfidence": 0.65,
+      "verified": false,
+      "expectedPressure": 3,
+      "bestUse": [
+        "lane swimming"
+      ],
+      "source": {
+        "updatedAt": "2026-07-23T14:01:35.730Z",
+        "confidence": "Medium",
+        "status": "estimated",
+        "note": "The venue does not state a public lane quantity."
+      },
+      "reservedLanes": null,
+      "sessionLabels": [
+        "lane swimming"
+      ],
+      "reasonCodes": [
+        "PUBLIC_LANES_UNKNOWN"
+      ],
+      "warnings": [
+        {
+          "id": "PUBLIC_LANES_UNKNOWN-row-fixture-cli-7",
+          "code": "PUBLIC_LANES_UNKNOWN",
+          "message": "The venue does not state a public lane quantity.",
+          "severity": "warning",
+          "sourceRowId": "row-fixture-cli-7"
+        }
+      ],
+      "publishable": true
+    }
+  ],
+  "issues": []
+}
