@@ -1,0 +1,15 @@
+import { addDays, format, parseISO } from 'date-fns';
+import type { ExtractionResult, InterpretedSession, ValidationIssue } from './types';
+import { configurationFromText, normalisePool, parseLaneQuantity, parseTimeRange } from './normalise';
+const days=['monday','tuesday','wednesday','thursday','friday','saturday','sunday'];
+const warning=(code:string,message:string,sourceRowId:string):ValidationIssue=>({id:`${code}-${sourceRowId}`,code,message,severity:'warning',sourceRowId});
+export function interpret(result:ExtractionResult):InterpretedSession[]{return result.rows.map(row=>{
+ const warnings=[...row.extractionWarnings],time=parseTimeRange(row.rawTimeText||row.rawSessionText),pool=normalisePool(`${row.rawPoolText||''} ${row.rawSessionText}`),configuration=configurationFromText(row.rawSessionText),index=days.indexOf(row.dayText||'');
+ const date=result.coverage.monday&&index>=0?format(addDays(parseISO(result.coverage.monday),index),'yyyy-MM-dd'):'';
+ if(!time?.start)warnings.push(warning('START_MISSING','Start time could not be interpreted.',row.id)); if(!time?.end)warnings.push(warning('END_MISSING','End time could not be interpreted.',row.id)); if(!pool)warnings.push(warning('POOL_UNKNOWN','Pool wording is ambiguous.',row.id));
+ const quantity=parseLaneQuantity(row.rawSessionText),reserved=/members only|club|reserved/i.test(row.rawSessionText),publicLanes=row.isCancelled||reserved?0:(quantity?.explicit?quantity.count:null);
+ if(publicLanes===null)warnings.push(warning('PUBLIC_LANES_UNKNOWN','The venue does not state a public lane quantity.',row.id));
+ const restrictions:InterpretedSession['restrictions']=[]; if(/members only/i.test(row.rawSessionText))restrictions.push({id:`member-${row.id}`,label:'Members only',detail:'The source identifies this as members-only.',severity:'medium'}); if(/aqua jogging/i.test(row.rawSessionText))restrictions.push({id:`aqua-${row.id}`,label:'Aqua jogging lane',detail:'A lane is allocated to aqua jogging; quantity is not stated.',severity:'low'});
+ const labels=['lane swimming','recreational','family','members only','silver swim'].filter(x=>row.rawSessionText.toLowerCase().includes(x)); const confidence=!date||!time?.start||!time?.end||!pool?'Low':publicLanes===null?'Medium':'High';
+ return {id:`session-${row.id}`,sourceSnapshotId:result.snapshot.id,sourceRowId:row.id,date,start:time?.start||'00:00',end:time?.end||'00:00',pool:pool||'main',configuration,totalLanes:null,publicLanes,laneAllocations:publicLanes===null?[]:[{type:reserved?'members-only':'public',count:publicLanes}],restrictions,originalSourceText:row.rawSessionText,sourceUpdateTimestamp:result.snapshot.fetchedAt,parsingConfidence:confidence==='High'?1:confidence==='Medium'?.65:.35,verified:!row.isCancelled&&warnings.length===0,expectedPressure:3 as const,bestUse:labels,source:{updatedAt:result.snapshot.fetchedAt,confidence,status:warnings.length?'estimated':'verified',note:warnings.map(x=>x.message).join(' ')||undefined},reservedLanes:reserved?quantity?.count??null:null,sessionLabels:labels,reasonCodes:warnings.map(x=>x.code),warnings,publishable:!row.isCancelled&&Boolean(date&&time?.start&&time?.end&&pool)};
+ })}

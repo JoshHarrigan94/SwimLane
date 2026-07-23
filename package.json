@@ -1,0 +1,38 @@
+{
+  "name": "laneview",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "timetable:fetch": "tsx scripts/timetable.ts fetch",
+    "timetable:parse": "tsx scripts/timetable.ts parse",
+    "timetable:validate": "tsx scripts/timetable.ts validate",
+    "timetable:diff": "tsx scripts/timetable.ts diff",
+    "timetable:publish": "tsx scripts/timetable.ts publish",
+    "timetable:ingest": "tsx scripts/timetable.ts ingest"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "latest",
+    "cheerio": "^1.2.0",
+    "date-fns": "latest",
+    "date-fns-tz": "^3.2.0",
+    "react": "latest",
+    "react-dom": "latest",
+    "zod": "latest"
+  },
+  "devDependencies": {
+    "@types/node": "^26.1.1",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "jsdom": "latest",
+    "tsx": "^4.23.1",
+    "typescript": "latest",
+    "vite": "latest",
+    "vitest": "latest"
+  }
+}

@@ -1,0 +1,4 @@
+import type { JourneyEstimate, JourneyPreferences, JourneyRequest } from '../lib/models'; import { journeyRules } from './rules'; import { MockJourneyProvider } from './providers'; import type { JourneyProvider } from './types'; import { cacheJourney,getCachedJourney } from './storage';
+const key=(r:JourneyRequest)=>`${r.origin.latitude.toFixed(journeyRules.coordinatePrecision)}:${r.origin.longitude.toFixed(journeyRules.coordinatePrecision)}:${r.destinationVenueId}:${r.mode}:${r.departureTime.slice(0,15)}`;
+export class JourneyService {constructor(private provider:JourneyProvider){}async estimate(request:JourneyRequest){const k=key(request),cached=getCachedJourney(k);if(cached)return cached;const value=await this.provider.estimateJourney(request);cacheJourney(k,value);return value}}
+export const developmentJourneyService=(prefs:JourneyPreferences)=>new JourneyService(new MockJourneyProvider(prefs.mockScenario));
